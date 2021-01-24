@@ -1,0 +1,55 @@
+{% extends 'inc/_layout.html' %} {% block body %}{% include 'inc/_navbar.html'%}
+
+<div class="jumbotron" style="margin-top: 100px;">
+    <form action="/search" method="POST" class="form-group">
+        <input type="text" name="Search" placeholder="Search Marvel Characters..." class="form-control">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+<div class="grid">
+    {% for char in result.data.results%}
+
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/{{char.id}}"><img src="{{ char.thumbnail.path}}.{{char.thumbnail.extension}}" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/{{char.id}}">{{char.name}}</a></h3>
+            <p>{{char.description}}</p> <br>{% for url in result.data.results[0].urls%}
+            <a href="{{url.url}}" class="link btn">{{url.type}}</a>{% endfor%}
+            <br>
+        </div>
+    </div>
+
+
+    {% endfor%}
+</div>
+<div class="footer">
+    <ul>
+        <a href="#">
+            <li>Blog</li>
+        </a>
+        <a href="#">
+            <li>RSS</li>
+        </a>
+        <a href="#">
+            <li>instagram</li>
+        </a>
+        <a href="https://github.com/Appii00">
+            <li>GitHub</li>
+        </a>
+        <a href="https://developer.marvel.com/docs#!/public/getCreatorCollection_get_12">
+            <li>API</li>
+        </a>
+
+    </ul>
+    <br>
+    <hr>
+    <br>
+    <a>Made by Ansh Rathod.</a><br>
+    <a>Code created in Python flask app</a><br>
+    <a>Based on coustum css. Icons from Font Awesome. Web fonts from Google.</a>
+    <br><br>
+</div>
+
+{% endblock %}

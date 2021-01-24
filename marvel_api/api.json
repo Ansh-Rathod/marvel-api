@@ -1,0 +1,66 @@
+{ % if series.data.results % } <
+h1 class = "heading"
+style = "margin-top:50px" > Series < /h1> <
+    div class = "comic_container" > { % for serie in series.data.results % } <
+    div class = "comic_container_inner" > < img src = "{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}"
+alt = ""
+class = "cover" >
+    <
+    div class = "description" >
+    <
+    h3 style = "text-align:center" > {
+        { serie.title } } < /h3> { % if serie.description % } <
+    p style = "text-align:center" > {
+        { serie.description | safe } } < /p>{% endif %}<br><br> <
+    center > < a href = "#"
+class = "btn" > Read Full < /a></center >
+    <
+    /center> <
+    /div> <
+    /div>{% endfor %}</div > { % endif % } { % if Events.data.results % } <
+    h1 class = "heading"
+style = "margin-top:50px" > Events < /h1> <
+    div class = "comic_container" > { % for Event in Events.data.results % } <
+    div class = "comic_container_inner" > < img src = "{{Event.thumbnail.path}}.{{Event.thumbnail.extension}}"
+alt = ""
+class = "cover" >
+    <
+    div class = "description" >
+
+    <
+    h3 > {
+        { Event.title } } < /h3> { % if Event.description % } <
+    p > {
+        { Event.description | safe } } < /p>{% endif %}<br><br> <
+    center > < a href = "#"
+class = "btn" > Read Full < /a></center >
+    <
+    /center> <
+    /div> <
+    /div>{% endfor %}</div > { % endif % } { % if stories.data.results % } <
+    h1 class = "heading"
+style = "margin-top:50px" > Stories < /h1> <
+    div class = "comic_container" > { % for story in stories.data.results % } <
+    div class = "comic_container_inner" > < img src = "{{story.thumbnail.path}}.{{story.thumbnail.extension}}"
+alt = ""
+class = "cover" >
+    <
+    div class = "description" >
+    <
+    h3 style = "text-align:center" > {
+        { story.title } } < /h3> { % if story.description % } <
+    p > {
+        { story.description | safe } } < /p>{% endif %}<br><br> <
+    center > < a href = "#"
+class = "btn" > Read Full < /a></center >
+    <
+    /center> <
+    /div> <
+    /div>{% endfor %}</div > { % endif % }
+
+<=
+=
+series = requests.get('https://gateway.marvel.com/v1/public/characters/' + string + '/series?ts=1&apikey=690e3ac16286c2de4591eca37269eedb&hash=fcbd875beb64e407e41ea8088ed2cd0c')
+events = requests.get('https://gateway.marvel.com/v1/public/characters/' + string + '/events?ts=1&apikey=690e3ac16286c2de4591eca37269eedb&hash=fcbd875beb64e407e41ea8088ed2cd0c')
+stories = requests.get('https://gateway.marvel.com/v1/public/characters/' + string + '/stories?ts=1&apikey=690e3ac16286c2de4591eca37269eedb&hash=fcbd875beb64e407e41ea8088ed2cd0c')
+series = json.loads(series.text), stories = json.loads(stories.text), Events = json.loads(events.text)

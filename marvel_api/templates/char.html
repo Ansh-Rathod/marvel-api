@@ -1,0 +1,33 @@
+{% extends 'inc/_layout.html' %} {% block body %}{% include 'inc/_navbar.html'%}
+<div class="container">
+    <div class="st-grid"><img src="{{result.data.results[0].thumbnail.path}}.{{result.data.results[0].thumbnail.extension}}" alt="" class="preview"></div>
+    <div class="About">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>ic_call_24px</title>
+    <g fill="#f82020">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+    </g>
+</svg>Name: {{result.data.results[0].name}}
+        <br><br>
+        <div class="center">{% for url in result.data.results[0].urls%}
+
+            <a href="{{url.url}}" class="link btn" style="margin-right: 5px;">{{url.type}}</a>{% endfor%}</div>{% if result.data.results[0].description %}
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 64 64"><title>single-01</title><g fill="#f82020"><path d="M55.082,44.713C50.396,43.02,42.587,41,32,41s-18.396,2.02-23.082,3.713 C5.378,45.993,3,49.393,3,53.174V62c0,0.552,0.448,1,1,1h56c0.552,0,1-0.448,1-1v-8.826C61,49.393,58.622,45.993,55.082,44.713z"></path> <path fill="#f82020" d="M32,35c8.271,0,15-6.729,15-15v-4c0-8.271-6.729-15-15-15S17,7.729,17,16v4C17,28.271,23.729,35,32,35z"></path></g></svg>About
+            : {{result.data.results[0].description}}
+        </p>{% endif %} <br><br> {% if comics.data.results%}
+        <h1 class="heading">Comics</h1>
+        <div class="comic_container"> {% for comic in comics.data.results %}
+            <div class="comic_container_inner"><img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="cover">
+                <div class="description">
+                    <h3 style="text-align:center">{{comic.title}}</h3>
+                    <p style="text-align:center">{{comic.description |safe}}</p><br><br>
+                    <center><a href="/comics/{{comic.id}}" class="btn">Read Full</a></center>
+                    </center>
+                </div>
+            </div>{% endfor %}</div><br>
+        <hr>{% endif %}
+
+    </div>
+</div>
+
+
+{% endblock %}

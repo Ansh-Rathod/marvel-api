@@ -1,0 +1,206 @@
+{% extends 'inc/_layout.html' %} {% block body %}{% include 'inc/_navbar.html'%}
+<div class="jumbotron">
+    <h1 style="text-align: center;">hello,friend!</h1><br>
+    <hr><br>
+    <h4 style="text-align: center;">here you are!,on world largest comic book based api,this api contains all following marvel characters and comics.</h4>
+</div>
+<div class="jumbotron">
+    <h1>Search Characters</h1><br>
+    <hr><br>
+    <form action="/search" method="POST" class="form-group">
+        <input type="text" name="Search" placeholder="Search Marvel Characters..." class="form-control">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+</div>
+<h1 style="text-align:center;text-transform:uppercase">Populer marvel characters</h1><br>
+
+<div class="grid">
+
+
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/1009368"><img src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/1009368">Iron Man</a></h3>
+            <p>Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an advanced suit of armor to save his life and escape captivity. Now with a new outlook on life, Tony uses his money and intelligence
+                to make the world a safer, better place as Iron Man.</p> <br>
+            <a href="http://marvel.com/comics/characters/1009368/iron_man?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">detail</a>
+            <a href="http://marvel.com/universe/Iron_Man_(Anthony_Stark)?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">wiki</a>
+            <a href="http://marvel.com/comics/characters/1009368/iron_man?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">comiclink</a>
+            <br>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/1017109"><img src="http://i.annihil.us/u/prod/marvel/i/mg/a/03/523219743a99b.jpg" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/1017109">Black Widow/Natasha Romanoff (MAA)</a></h3>
+            <p>Natasha Romanoff, also known as Black Widow, is a world-renowned super spy and one of S.H.I.E.L.D.&#39;s top agents. Her hand-to-hand combat skills, intelligence, and unpredictability make her a deadly secret weapon. True to her mysterious
+                nature, Black Widow comes and goes as she pleases, but always appears exactly when her particular skills are needed.</p> <br>
+            <a href="http://marvel.com/comics/characters/1009189/black_widow?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">detail</a>
+            <a href="http://marvel.com/universe/Black_Widow_(Natasha_Romanova)?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">wiki</a>
+            <a href="http://marvel.com/comics/characters/1009189/black_widow?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">comiclink</a>
+            <br>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/1009220"><img src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087.jpg" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/1009220">Captain America</a></h3>
+            <p>Vowing to serve his country any way he could, young Steve Rogers took the super soldier serum to become America&#39;s one-man army. Fighting for the red, white and blue for over 60 years, Captain America is the living, breathing symbol of
+                freedom and liberty.</p> <br>
+            <a href="http://marvel.com/comics/characters/1009220/captain_america?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">detail</a>
+            <a href="http://marvel.com/universe/Captain_America_(Steve_Rogers)?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">wiki</a>
+            <a href="http://marvel.com/comics/characters/1009220/captain_america?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">comiclink</a>
+            <br>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/1017108"><img src="http://i.annihil.us/u/prod/marvel/i/mg/4/03/5232198a81c17.jpg" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/1017108">Hawkeye/Clint Barton (MAA)</a></h3>
+            <p>Hawkeye is an expert archer with an attitude just as on-target as his aim. His stealth combat experience and his ability to hit any target with any projectile make him a valuable member of the Avengers. However, he refuses to let things get
+                too serious, as he has as many jokes as he does arrows!</p> <br>
+            <a href="http://marvel.com/comics/characters/1009338/hawkeye?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">detail</a>
+            <a href="http://marvel.com/universe/Hawkeye_(Clint_Barton)?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">wiki</a>
+            <a href="http://marvel.com/comics/characters/1009338/hawkeye?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">comiclink</a>
+            <br>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/1017107"><img src="http://i.annihil.us/u/prod/marvel/i/mg/0/03/523219b086a17.jpg" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/1017107">Hulk/Bruce Banner (MAA)</a></h3>
+            <p>Scientist Bruce Banner was transformed into the Hulk as a result to gamma radiation exposure. Over 8 feet tall and weighing 1,040 pounds, it&#39;s Hulk&#39;s strength that makes him the strongest hero in the Marvel Universe! Hulk smashes all
+                threats that dare disturb the peace and friendship he has found in the Avengers. </p> <br>
+            <a href="http://marvel.com/characters/25/hulk?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">detail</a>
+            <a href="http://marvel.com/universe/Hulk_(Bruce_Banner)?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">wiki</a>
+            <a href="http://marvel.com/comics/characters/1009351/hulk?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">comiclink</a>
+            <br>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="grid-img">
+            <a href="/char/1009664"><img src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg" alt="" class="logo"></a>
+        </div>
+        <div class="marvel_name">
+            <h3><a href="/char/1009664">Thor</a></h3>
+            <p>As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he&#39;s quite smart and compassionate. He&#39;s
+                self-assured, and he would never, ever stop fighting for a worthwhile cause.</p> <br>
+            <a href="http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">detail</a>
+            <a href="http://marvel.com/universe/Thor_(Thor_Odinson)?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">wiki</a>
+            <a href="http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="link btn">comiclink</a>
+            <br>
+        </div>
+    </div>
+    <div class="grid-item" style="display:flex;align-items:center;justify-content:center;background-color:#ddd"><a href="/char/page/0" class="btn" style="margin:100px">See All</a>
+    </div>
+</div>
+</div>
+<div class="jumbotron">
+    <h1>Search Comics</h1><br>
+    <form action="/comicsearch" method="POST" class="form-group">
+        <input type="text" name="Search" placeholder="Search Marvel Comics..." class="form-control">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form><br>
+    <hr><br>
+    <h3>Search With Year</h3><br>
+    <hr><br>
+    <form action="/comicsearchyear" method="POST" class="form-group">
+        <input type="text" name="Search" placeholder="Search Marvel Comics..." class="form-control">
+        <select name="Year" placeholder="Search year..." class="form-control">
+            <option value="2020">2020</option>{% for year in range(1950,2020)%}
+        <option value="{{year}}">{{year}}</option>{% endfor%}</select>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+</div>
+
+<h1 style="margin:50px;text-align:center;">Populer comics</h1>
+<div class="grid">
+    <div class="comic_container_inner">
+        <a href="/comics/75626"><img src="http://i.annihil.us/u/prod/marvel/i/mg/6/e0/5cf82e6f27029.jpg" alt="" class="cover"></a>
+        <div class="description">
+            <h4 style="text-align:center;margin-bottom:12px">Hulkverines (Trade Paperback)</h4>
+            <hr><br>
+            <h4 style="float:left;border:1px solid #ddd;">15.99 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>ic_attach_money_24px</title>
+    <g fill="#e83030">
+        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"></path>
+    </g>
+</svg></h4><br><br>
+            <center><a href="http://marvel.com/comics/collection/75626/hulkverines_trade_paperback?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="btn" style="padding:8px 30px ;">Buy Now</a></center>
+            </center><br>
+        </div>
+    </div>
+    <div class="comic_container_inner">
+        <a href="/comics/61165"><img src="http://i.annihil.us/u/prod/marvel/i/mg/7/40/585c4e676a5f6.jpg" alt="" class="cover"></a>
+        <div class="description">
+            <h4 style="text-align:center;margin-bottom:12px">Thor Annual (2000) #1</h4>
+            <hr><br>
+            <h4 style="float:left;border:1px solid #ddd;">0 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>ic_attach_money_24px</title>
+    <g fill="#e83030">
+        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"></path>
+    </g>
+</svg></h4><br><br>
+            <center><a href="http://marvel.com/comics/issue/61165/thor_annual_2000_1?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="btn" style="padding:8px 30px ;">Buy Now</a></center>
+            </center><br>
+        </div>
+    </div>
+
+    <div class="comic_container_inner">
+        <a href="/comics/70815"><img src="http://i.annihil.us/u/prod/marvel/i/mg/8/d0/5e0fa351f2b44.jpg" alt="" class="cover"></a>
+        <div class="description">
+            <h4 style="text-align:center;margin-bottom:12px">Black Panther Book 8: The Intergalactic Empire Of Wakanda Part Three (Trade Paperback)</h4>
+            <hr><br>
+            <h4 style="float:left;border:1px solid #ddd;">17.99 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>ic_attach_money_24px</title>
+    <g fill="#e83030">
+        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"></path>
+    </g>
+</svg></h4><br><br>
+            <center><a href="http://marvel.com/comics/collection/70815/black_panther_book_8_the_intergalactic_empire_of_wakanda_part_three_trade_paperback?utm_campaign=apiRef&amp;utm_source=690e3ac16286c2de4591eca37269eedb" class="btn" style="padding:8px 30px ;">Buy Now</a></center>
+            </center><br>
+        </div>
+    </div>
+    <div class="comic_container_inner" style="display:flex;align-items:center;justify-content:center;background-color:#ddd"> <a href="/comics/page/0" class="btn">See All</a></div>
+</div>
+
+</div>
+<div class="footer">
+    <ul>
+        <a href="#">
+            <li>Blog</li>
+        </a>
+        <a href="#">
+            <li>RSS</li>
+        </a>
+        <a href="#">
+            <li>instagram</li>
+        </a>
+        <a href="https://github.com/Appii00">
+            <li>GitHub</li>
+        </a>
+        <a href="https://developer.marvel.com/docs#!/public/getCreatorCollection_get_12">
+            <li>API</li>
+        </a>
+
+    </ul>
+    <br>
+    <hr>
+    <br>
+    <a>Made by Ansh Rathod.</a><br>
+    <a>Code created in Python flask app</a><br>
+    <a>Based on coustum css. Icons from Font Awesome. Web fonts from Google.</a>
+    <br><br>
+</div>
+
+{% endblock %}
